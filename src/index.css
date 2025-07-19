@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+@layer base {
+  body {
+    @apply bg-neutral-800 text-neutral-100;
+  }
+}
+
+
+
