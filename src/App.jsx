@@ -12,6 +12,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from './components/AdminRoute';
 import AdminLayout from "./components/AdminLayout";
 import AddWatch from "./adminPages/AddWatch";
+import Watch from "./pages/Watch.jsx";
 
 const App = function () {
   return (
@@ -22,6 +23,7 @@ const App = function () {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="watches" element={<Watches />} />
+          <Route path="/watch/:id" element={<Watch />} />
         </Route>
 
         <Route element={<AdminRoute />}>

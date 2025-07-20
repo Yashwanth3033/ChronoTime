@@ -54,6 +54,7 @@ const Home = () => {
           price={w.watchPrice}
           brandName={w.watchBrand}
           description={w.watchDescription}
+          watchId={w.id}
         />
       )
     })}

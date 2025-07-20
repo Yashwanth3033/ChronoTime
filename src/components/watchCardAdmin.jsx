@@ -6,6 +6,7 @@ import Section from "./Section";
 import toast from "react-hot-toast";
 import { editWatch } from "../services/apiWatches";
 import { ModalContext } from "./Modal";
+import {truncateWords} from "../utils/utils.js";
 
 export default function WatchCardAdmin({name, price, watchImg, brandName, description, watchId, handleDeleteWatch, category, onEdit}) {
   return (
@@ -23,7 +24,7 @@ export default function WatchCardAdmin({name, price, watchImg, brandName, descri
             {name}
           </h5>
           <p className="mb-3 font-normal text-gray-400">{brandName}</p>
-          <p className="mb-3 font-medium text-gray-200">{description}</p>
+          <p className="mb-3 font-medium text-gray-200">{truncateWords(description)}</p>
         </div>
         <h2 className="text-lime-600 font-semibold">{price}</h2>
       </div>

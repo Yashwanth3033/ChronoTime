@@ -20,8 +20,9 @@ const Watches = () => {
           name={w.watchName}
           price={w.watchPrice}
           description={w.watchDescription}
-          brandName={w.brandName}
+          brandName={w.watchBrand}
           watchImg={w.watchImage}
+          watchId={w.id}
         />
       ))}
     </div>

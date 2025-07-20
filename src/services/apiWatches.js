@@ -56,6 +56,14 @@ export const getWatches = async function () {
     return Watch;
 }
 
+export const getWatch = async function (id) {
+    const {data, error} = await supabase.from("Watch").select("*").eq("id", id).single()
+
+    if (error) throw new Error("Watch couldn't be fetched!");
+
+    return data;
+}
+
 export async function getLatestThreeProducts() {
   const { data, error } = await supabase
     .from("Watch")
